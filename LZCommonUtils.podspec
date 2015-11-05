@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "LZCommonUtils"
-  s.version          = "0.1.1"
+  s.version          = "0.1.2"
   s.summary          = "A common utils library."
 
 # This description is used to generate tags and improve search results.
@@ -29,9 +29,9 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   s.source_files = 'Pod/Classes/**/*'
-  s.resource_bundles = {
-    'LZCommonUtils' => ['Pod/Assets/*.png']
-  }
+  # s.resource_bundles = {
+  #    'LZCommonUtils' => ['Pod/Assets/*.png']
+  #  }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
