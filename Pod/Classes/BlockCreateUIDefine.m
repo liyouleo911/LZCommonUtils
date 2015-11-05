@@ -1,9 +1,9 @@
 //
 //  BlockCreateUIDefine.m
-//  nineclub
+//  LZCommonUtils
 //
-//  Created by logiph on 4/13/13.
-//  Copyright (c) 2013 logiph. All rights reserved.
+//  Created by liyou on 15/4/5.
+//  Copyright (c) 2015年 liyou. All rights reserved.
 //
 
 #import "BlockCreateUIDefine.h"

@@ -1,9 +1,9 @@
 //
 //  NSMutableDictionary+Parser.m
-//  Weather
+//  LZCommonUtils
 //
-//  Created by suguiyang@91.com on 15-02-15.
-//  Copyright (c) 2015年 Baidu. All rights reserved.
+//  Created by liyou on 15/4/5.
+//  Copyright (c) 2015年 liyou. All rights reserved.
 //
 
 #import "NSMutableDictionary+Parser.h"

@@ -42,13 +42,6 @@
 			remoteGlobalIDString = 20ECAC06D020CD19A1AD578B33D85E7F;
 			remoteInfo = LZCommonUtils;
 		};
-		FEB9DB7EC0F9A5467A345558F802C6FD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 42EFD20F349324396D0915DDF81F4532;
-			remoteInfo = "LZCommonUtils-LZCommonUtils";
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -84,7 +77,6 @@
 		BBF4381C572A79CAC2BE96D241EF287C /* UIView+loadFromXib.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIView+loadFromXib.m"; sourceTree = "<group>"; };
 		C1E66502DAD1B44FA241231C162CBAD8 /* NSString+Extended.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSString+Extended.h"; sourceTree = "<group>"; };
 		CCF0D0447036E2A91A7DB6D01451F2BC /* StringLogic.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = StringLogic.h; sourceTree = "<group>"; };
-		D5A6131A493815F889ABE96A13B54BFA /* LZCommonUtils.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LZCommonUtils.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD9F86CD41073E2E2F5FEAB044781982 /* UIImage+Util.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Util.m"; sourceTree = "<group>"; };
 		F4B51554EAB73D4DC380E062B5B0C427 /* UIView+Size.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIView+Size.h"; sourceTree = "<group>"; };
 		FC524E1100049B8EACFCB4F061F07FF6 /* Pods-LZCommonUtils_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LZCommonUtils_Example.debug.xcconfig"; sourceTree = "<group>"; };
@@ -96,13 +88,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				96B562AF6803BC8AEEED065A7198AD85 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		777135DB2A5028321F226CFB08E02611 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,7 +210,6 @@
 		CCA510CFBEA2D207524CDA0D73C3B561 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D5A6131A493815F889ABE96A13B54BFA /* LZCommonUtils.bundle */,
 				ADAE01D43ED2F48AF771FB5E46D59BB2 /* libLZCommonUtils.a */,
 				AF9F7F541F648E740FDD8C900337EF54 /* libPods-LZCommonUtils_Example.a */,
 			);
@@ -301,29 +285,11 @@
 			buildRules = (
 			);
 			dependencies = (
-				49D4AAC5ACA4CAEC773243A9E73D35CE /* PBXTargetDependency */,
 			);
 			name = LZCommonUtils;
 			productName = LZCommonUtils;
 			productReference = ADAE01D43ED2F48AF771FB5E46D59BB2 /* libLZCommonUtils.a */;
 			productType = "com.apple.product-type.library.static";
-		};
-		42EFD20F349324396D0915DDF81F4532 /* LZCommonUtils-LZCommonUtils */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B70F56BE4462E4EDF0E07663DC5EB418 /* Build configuration list for PBXNativeTarget "LZCommonUtils-LZCommonUtils" */;
-			buildPhases = (
-				3640FD2F6568BDD2DFCFAB04589C1466 /* Sources */,
-				777135DB2A5028321F226CFB08E02611 /* Frameworks */,
-				C51D20B57A2A4DC830110C4508BB28E9 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "LZCommonUtils-LZCommonUtils";
-			productName = "LZCommonUtils-LZCommonUtils";
-			productReference = D5A6131A493815F889ABE96A13B54BFA /* LZCommonUtils.bundle */;
-			productType = "com.apple.product-type.bundle";
 		};
 		BFF60F831C504530285C5D3B590EBE13 /* Pods-LZCommonUtils_Example */ = {
 			isa = PBXNativeTarget;
@@ -364,21 +330,10 @@
 			projectRoot = "";
 			targets = (
 				20ECAC06D020CD19A1AD578B33D85E7F /* LZCommonUtils */,
-				42EFD20F349324396D0915DDF81F4532 /* LZCommonUtils-LZCommonUtils */,
 				BFF60F831C504530285C5D3B590EBE13 /* Pods-LZCommonUtils_Example */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXResourcesBuildPhase section */
-		C51D20B57A2A4DC830110C4508BB28E9 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		26D7C39B4932EC01900BE38F7E22E75C /* Sources */ = {
@@ -386,13 +341,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B03E42A86DDAA63B20F7235B8B988ED4 /* Pods-LZCommonUtils_Example-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3640FD2F6568BDD2DFCFAB04589C1466 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,12 +365,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		49D4AAC5ACA4CAEC773243A9E73D35CE /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "LZCommonUtils-LZCommonUtils";
-			target = 42EFD20F349324396D0915DDF81F4532 /* LZCommonUtils-LZCommonUtils */;
-			targetProxy = FEB9DB7EC0F9A5467A345558F802C6FD /* PBXContainerItemProxy */;
-		};
 		6D59FBF93449BE9DA8FCF1BBD6466973 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = LZCommonUtils;
@@ -569,30 +511,6 @@
 			};
 			name = Release;
 		};
-		3AF6CA2CEB371B2646F41089D3C6B295 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 01E4B210C9D4053A9438607DA86619AF /* LZCommonUtils-Private.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				PRODUCT_NAME = LZCommonUtils;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Release;
-		};
-		D90321F7F86EFD0BD73B4F38DC3C505E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 01E4B210C9D4053A9438607DA86619AF /* LZCommonUtils-Private.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				PRODUCT_NAME = LZCommonUtils;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Debug;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -619,15 +537,6 @@
 			buildConfigurations = (
 				2B0CFD70EFD9E6FAE815E443FC77F37E /* Debug */,
 				3755802F4936862C419A0FD55FB00F36 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		B70F56BE4462E4EDF0E07663DC5EB418 /* Build configuration list for PBXNativeTarget "LZCommonUtils-LZCommonUtils" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D90321F7F86EFD0BD73B4F38DC3C505E /* Debug */,
-				3AF6CA2CEB371B2646F41089D3C6B295 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

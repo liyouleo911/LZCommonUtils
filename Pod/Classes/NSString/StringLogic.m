@@ -1,9 +1,9 @@
 //
 //  StringLogic.m
-//  Weather
+//  LZCommonUtils
 //
-//  Created by logiph on 3/1/13.
-//
+//  Created by liyou on 15/4/5.
+//  Copyright (c) 2015年 liyou. All rights reserved.
 //
 
 #import "StringLogic.h"
