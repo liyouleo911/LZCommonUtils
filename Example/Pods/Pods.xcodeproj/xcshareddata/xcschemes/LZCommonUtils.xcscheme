@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F2E0326092757C99D2D1DFDA"
+               BlueprintIdentifier = "03B62F881E10D19B09C642DA"
                BuildableName = "libLZCommonUtils.a"
                BlueprintName = "LZCommonUtils"
                ReferencedContainer = "container:Pods.xcodeproj">
