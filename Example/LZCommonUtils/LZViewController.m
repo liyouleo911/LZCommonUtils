@@ -7,6 +7,7 @@
 //
 
 #import "LZViewController.h"
+#import <LZCommonUtils/BlockCreateUIDefine.h>
 
 @interface LZViewController ()
 
@@ -17,7 +18,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    self.view.backgroundColor = [UIColor whiteColor];
+    
+    UILabel *label = block_createLabel([UIColor blackColor], 15);
+    [label setFrame:CGRectMake(100, 100, 100, 100)];
+    label.text = @"Test Test";
+    [self.view addSubview:label];
 }
 
 - (void)didReceiveMemoryWarning

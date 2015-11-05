@@ -7,12 +7,17 @@
 //
 
 #import "LZAppDelegate.h"
+#import "LZViewController.h"
 
 @implementation LZAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    LZViewController *tabbarController = [[LZViewController alloc] init];
+    [self.window setRootViewController:tabbarController];
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 

@@ -1,0 +1,14 @@
+PODS:
+  - LZCommonUtils (0.1.0)
+
+DEPENDENCIES:
+  - LZCommonUtils (from `../`)
+
+EXTERNAL SOURCES:
+  LZCommonUtils:
+    :path: ../
+
+SPEC CHECKSUMS:
+  LZCommonUtils: f1d98b40f67ff9569d764ce013031d4bc5acc3f9
+
+COCOAPODS: 0.38.2
