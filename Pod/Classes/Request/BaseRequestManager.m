@@ -52,11 +52,11 @@ static BaseRequestManager *manager;
     }
 
     if (returnCode != 0) {
-        [self processWrongResponse];
+        [self processResponseErrorInfo:[msgDict stringValueForKey:@"desc"]];
     }
 }
 
-- (void)processWrongResponse {
+- (void)processResponseErrorInfo:(NSString*)errorInfo {
 }
 
 - (NSMutableDictionary*)addCommonParamsWithUrl:(NSDictionary*)dict
