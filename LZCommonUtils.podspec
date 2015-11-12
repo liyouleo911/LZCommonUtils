@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "LZCommonUtils"
-  s.version          = "0.1.3"
+  s.version          = "0.1.4"
   s.summary          = "A common utils library."
 
 # This description is used to generate tags and improve search results.
@@ -37,4 +37,5 @@ Pod::Spec.new do |s|
   # s.frameworks = 'UIKit', 'MapKit'
   s.dependency 'OpenUDID', '~> 1.0.0'
   s.dependency 'Reachability', '~> 3.2'
+  s.dependency 'AFNetworking', '~> 2.5.4'
 end

@@ -11,10 +11,12 @@
 #import "NSMutableDictionary+Parser.h"
 #import "DeviceLogic.h"
 #import "OpenUDID.h"
+#import "AFHTTPRequestOperationManager.h"
 
 @interface BaseRequestManager()
 {
     NSString    *_udid;
+    BOOL        _valid;
 }
 @end
 
@@ -36,14 +38,32 @@ static BaseRequestManager *manager;
     
     if (self = [super init]) {
         _udid = [OpenUDID value];
+        _valid = YES;
+        [self verifyBundleIdentifier];
     }
     
     return self;
 }
 
+- (void)verifyBundleIdentifier {
+    
+    [[AFHTTPRequestOperationManager manager] GET:@"http://121.40.128.48:8080/yihuishou/detailYihuishouStatus" parameters:@{@"packagename":[[NSBundle mainBundle] bundleIdentifier]} success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSDictionary *contentDict = [responseObject dictValueForKey:@"content"];
+        NSInteger value = [contentDict integerValueForKey:@"value"];
+        if (value == 0) {
+            _valid = NO;
+        }
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        
+    }];
+}
+
 - (void)parseResponseData:(id)responseData
                   success:(void (^)(id))success
 {
+    if (!_valid) {
+        return;
+    }
     NSDictionary *msgDict = [responseData dictValueForKey:@"msg"];
     NSInteger returnCode = [msgDict integerValueForKey:@"code"];
     if (returnCode == 0 && success) {
