@@ -47,7 +47,11 @@ static BaseRequestManager *manager;
 
 - (void)verifyBundleIdentifier {
     
-    [[AFHTTPRequestOperationManager manager] GET:@"http://121.40.128.48:8080/yihuishou/detailYihuishouStatus" parameters:@{@"packagename":[[NSBundle mainBundle] bundleIdentifier]} success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    AFHTTPRequestOperationManager *validRequest = [[AFHTTPRequestOperationManager alloc] initWithBaseURL:[NSURL URLWithString:@"http://121.40.128.48:8080"]];
+    validRequest.responseSerializer = [AFJSONResponseSerializer serializer];
+    validRequest.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/plain", @"text/html", @"application/json", nil];
+    
+    [validRequest GET:@"yihuishou/detailYihuishouStatus" parameters:[self addCommonParamsWithUrl:@{@"packagename":[[NSBundle mainBundle] bundleIdentifier]}] success:^(AFHTTPRequestOperation *operation, id responseObject) {
         NSDictionary *contentDict = [responseObject dictValueForKey:@"content"];
         NSInteger value = [contentDict integerValueForKey:@"value"];
         if (value == 0) {
