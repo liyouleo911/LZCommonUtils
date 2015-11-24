@@ -8,6 +8,7 @@
 
 #import "LZViewController.h"
 #import <LZCommonUtils/BlockCreateUIDefine.h>
+#import <LZCommonUtils/UIApplication+AppVersion.h>
 
 @interface LZViewController ()
 
@@ -22,7 +23,7 @@
     
     UILabel *label = block_createLabel([UIColor blackColor], 15);
     [label setFrame:CGRectMake(100, 100, 100, 100)];
-    label.text = @"Test Test";
+    label.text = [UIApplication build];
     [self.view addSubview:label];
 }
 

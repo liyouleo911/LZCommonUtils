@@ -7,6 +7,7 @@
 //
 
 #import "BaseRequestManager.h"
+#import "UIApplication+AppVersion.h"
 #import "NSDictionary+Parser.h"
 #import "NSMutableDictionary+Parser.h"
 #import "DeviceLogic.h"
@@ -110,7 +111,7 @@ static BaseRequestManager *manager;
     [commonDict setStringValue:_udid forKey:@"driverId"];
     [commonDict setStringValue:@"ios" forKey:@"platform"];
     [commonDict setStringValue:[UIDevice currentDevice].systemVersion forKey:@"release"];
-    [commonDict setStringValue:[[[NSBundle mainBundle] infoDictionary] objectForKey:(NSString *)kCFBundleVersionKey] forKey:@"version"];
+    [commonDict setStringValue:[UIApplication build] forKey:@"version"];
     if ([DeviceLogic getNetworkValue] == type_Wifi) {
         [commonDict setStringValue:@"wifi" forKey:@"netType"];
     } else {

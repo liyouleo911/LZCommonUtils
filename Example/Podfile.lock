@@ -20,7 +20,7 @@ PODS:
   - AFNetworking/UIKit (2.5.4):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
-  - LZCommonUtils (0.1.5):
+  - LZCommonUtils (0.1.6):
     - AFNetworking (~> 2.5.4)
     - OpenUDID (~> 1.0.0)
     - Reachability (~> 3.2)
@@ -36,7 +36,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   AFNetworking: 05edc0ac4c4c8cf57bcf4b84be5b0744b6d8e71e
-  LZCommonUtils: db32c6ae8d4a929dec785db55a2faf648025036e
+  LZCommonUtils: 8078ece2e5d52eea13b605f42a8c813e868858e9
   OpenUDID: e7cb6984c7304906ad20f3a36bf087b025896b6b
   Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
 
