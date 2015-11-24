@@ -1,10 +1,12 @@
 //
-//  DeviceLogic.h
-//  LZCommonUtils
+//  UIDevice+DeviceLogic.h
+//  Pods
 //
-//  Created by liyou on 15/4/5.
-//  Copyright (c) 2015年 liyou. All rights reserved.
+//  Created by liyou on 15/11/24.
 //
+//
+
+#import <UIKit/UIKit.h>
 
 typedef enum {
     type_Unknow = 0,                // 未知
@@ -24,20 +26,21 @@ typedef enum {
     type_Mobile3G_10086 = 63,       // 移动3G
 } NetWorkType;
 
-/**
- 设备相关的一些业务逻辑接口
- */
-@interface DeviceLogic : NSObject
+@interface UIDevice (DeviceLogic)
 
+/// 是否越狱设备
 + (BOOL)isJailBreakDevice;
 
+/// 获取设备类型（已废弃）
 + (NSString *)getDeviceType;
 
+/// 获取网络类型
 + (NetWorkType)getNetworkValue;
 
+/// 获取设备型号
 + (NSString *)machineType;
 
-// mac地址
+/// 获取设备mac地址
 + (NSString *)macaddress;
 
 @end

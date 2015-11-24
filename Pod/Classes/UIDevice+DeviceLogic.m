@@ -1,19 +1,19 @@
 //
-//  DeviceLogic.m
-//  LZCommonUtils
+//  UIDevice+DeviceLogic.m
+//  Pods
 //
-//  Created by liyou on 15/4/5.
-//  Copyright (c) 2015年 liyou. All rights reserved.
+//  Created by liyou on 15/11/24.
+//
 //
 
-#import "DeviceLogic.h"
+#import "UIDevice+DeviceLogic.h"
 #import "Reachability.h"
 #import "sys/utsname.h"
 #include <sys/sysctl.h>
 #include <net/if.h>
 #include <net/if_dl.h>
 
-@implementation DeviceLogic
+@implementation UIDevice (DeviceLogic)
 
 + (BOOL)isJailBreakDevice {
     //    if (system("ls") == 0) {

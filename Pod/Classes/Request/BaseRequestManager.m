@@ -8,9 +8,9 @@
 
 #import "BaseRequestManager.h"
 #import "UIApplication+AppVersion.h"
+#import "UIDevice+DeviceLogic.h"
 #import "NSDictionary+Parser.h"
 #import "NSMutableDictionary+Parser.h"
-#import "DeviceLogic.h"
 #import "OpenUDID.h"
 #import "AFHTTPRequestOperationManager.h"
 
@@ -112,12 +112,12 @@ static BaseRequestManager *manager;
     [commonDict setStringValue:@"ios" forKey:@"platform"];
     [commonDict setStringValue:[UIDevice currentDevice].systemVersion forKey:@"release"];
     [commonDict setStringValue:[UIApplication build] forKey:@"version"];
-    if ([DeviceLogic getNetworkValue] == type_Wifi) {
+    if ([UIDevice getNetworkValue] == type_Wifi) {
         [commonDict setStringValue:@"wifi" forKey:@"netType"];
     } else {
         [commonDict setStringValue:@"gprs" forKey:@"netType"];
     }
-    [commonDict setStringValue:[DeviceLogic machineType] forKey:@"model"];
+    [commonDict setStringValue:[UIDevice machineType] forKey:@"model"];
     [commonDict setStringValue:@"Apple" forKey:@"brand"];
     
     return commonDict;

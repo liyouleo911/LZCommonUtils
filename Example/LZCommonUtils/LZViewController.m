@@ -9,6 +9,7 @@
 #import "LZViewController.h"
 #import <LZCommonUtils/BlockCreateUIDefine.h>
 #import <LZCommonUtils/UIApplication+AppVersion.h>
+#import <LZCommonUtils/UIDevice+DeviceLogic.h>
 
 @interface LZViewController ()
 
@@ -23,7 +24,7 @@
     
     UILabel *label = block_createLabel([UIColor blackColor], 15);
     [label setFrame:CGRectMake(100, 100, 100, 100)];
-    label.text = [UIApplication build];
+    label.text = [NSString stringWithFormat:@"%@%@", [UIApplication build], [UIDevice machineType]];
     [self.view addSubview:label];
 }
 
