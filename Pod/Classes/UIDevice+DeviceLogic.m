@@ -48,7 +48,7 @@
             break;
             
         case ReachableViaWWAN:
-            networkType = type_MobileUnknow;
+            networkType = type_Mobile;
             break;
             
         default:
