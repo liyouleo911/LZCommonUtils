@@ -53,10 +53,14 @@ static BaseRequestManager *manager;
     validRequest.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/plain", @"text/html", @"application/json", nil];
     
     [validRequest GET:@"yihuishou/detailYihuishouStatus" parameters:[self addCommonParamsWithUrl:@{@"packagename":[[NSBundle mainBundle] bundleIdentifier]}] success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        NSDictionary *contentDict = [responseObject dictValueForKey:@"content"];
-        NSInteger value = [contentDict integerValueForKey:@"value"];
-        if (value == 0) {
-            _valid = NO;
+        NSDictionary *msgDict = [responseObject dictValueForKey:@"msg"];
+        NSInteger returnCode = [msgDict integerValueForKey:@"code"];
+        if (returnCode == 0) {
+            NSDictionary *contentDict = [responseObject dictValueForKey:@"content"];
+            if ([contentDict hasValueForKey:@"value"] &&
+                [contentDict integerValueForKey:@"value"] == 0) {
+                _valid = NO;
+            }
         }
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         
