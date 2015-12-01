@@ -10,6 +10,7 @@
 #import <LZCommonUtils/BlockCreateUIDefine.h>
 #import <LZCommonUtils/UIApplication+AppVersion.h>
 #import <LZCommonUtils/UIDevice+DeviceLogic.h>
+#import <LZCommonUtils/BaseRequestManager.h>
 
 @interface LZViewController ()
 
@@ -20,6 +21,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [BaseRequestManager defaultManager];
     self.view.backgroundColor = [UIColor whiteColor];
     
     UILabel *label = block_createLabel([UIColor blackColor], 15);

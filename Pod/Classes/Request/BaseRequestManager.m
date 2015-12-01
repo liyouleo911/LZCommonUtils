@@ -11,15 +11,6 @@
 #import "UIDevice+DeviceLogic.h"
 #import "NSDictionary+Parser.h"
 #import "NSMutableDictionary+Parser.h"
-#import "OpenUDID.h"
-#import "AFHTTPRequestOperationManager.h"
-
-@interface BaseRequestManager()
-{
-    NSString    *_udid;
-    BOOL        _valid;
-}
-@end
 
 static BaseRequestManager *manager;
 @implementation BaseRequestManager
@@ -38,54 +29,14 @@ static BaseRequestManager *manager;
 - (instancetype)init {
     
     if (self = [super init]) {
-        _udid = [OpenUDID value];
-        _valid = YES;
         [self verifyBundleIdentifier];
     }
     
     return self;
 }
 
-- (void)verifyBundleIdentifier {
-    
-    AFHTTPRequestOperationManager *validRequest = [[AFHTTPRequestOperationManager alloc] initWithBaseURL:[NSURL URLWithString:@"http://121.40.128.48:8080"]];
-    validRequest.responseSerializer = [AFJSONResponseSerializer serializer];
-    validRequest.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/plain", @"text/html", @"application/json", nil];
-    
-    [validRequest GET:@"yihuishou/detailYihuishouStatus" parameters:[self addCommonParamsWithUrl:@{@"packagename":[[NSBundle mainBundle] bundleIdentifier]}] success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        NSDictionary *msgDict = [responseObject dictValueForKey:@"msg"];
-        NSInteger returnCode = [msgDict integerValueForKey:@"code"];
-        if (returnCode == 0) {
-            NSDictionary *contentDict = [responseObject dictValueForKey:@"content"];
-            if ([contentDict hasValueForKey:@"value"] &&
-                [contentDict integerValueForKey:@"value"] == 0) {
-                _valid = NO;
-            }
-        }
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        
-    }];
-}
-
 - (void)parseResponseData:(id)responseData
-                  success:(void (^)(id))success
-{
-    if (!_valid) {
-        return;
-    }
-    NSDictionary *msgDict = [responseData dictValueForKey:@"msg"];
-    NSInteger returnCode = [msgDict integerValueForKey:@"code"];
-    if (returnCode == 0 && success) {
-        success([responseData dictValueForKey:@"content"]);
-        return;
-    }
-
-    if (returnCode != 0) {
-        [self processResponseErrorInfo:[msgDict stringValueForKey:@"desc"]];
-    }
-}
-
-- (void)processResponseErrorInfo:(NSString*)errorInfo {
+                  success:(void (^)(id))success {
 }
 
 - (NSMutableDictionary*)addCommonParamsWithUrl:(NSDictionary*)dict
@@ -101,30 +52,37 @@ static BaseRequestManager *manager;
 
 #pragma mark - Private
 
-/* 请求通用参数 */
-- (NSMutableDictionary *)commonParamsWithKeys
-{
-    NSMutableDictionary *commonDict = [[NSMutableDictionary alloc] init];
-#ifndef DEBUG
-    NSDate *curDate = [NSDate date];
-    NSDateFormatter * dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setTimeZone:[NSTimeZone systemTimeZone]];
-    [dateFormatter setDateFormat:@"yyyyMMddHHmmss"];
-    [commonDict setStringValue:[dateFormatter stringFromDate:curDate] forKey:@"time"];
-#endif
-    [commonDict setStringValue:_udid forKey:@"driverId"];
-    [commonDict setStringValue:@"ios" forKey:@"platform"];
-    [commonDict setStringValue:[UIDevice currentDevice].systemVersion forKey:@"release"];
-    [commonDict setStringValue:[UIApplication build] forKey:@"version"];
-    if ([UIDevice getNetworkValue] == type_Wifi) {
-        [commonDict setStringValue:@"wifi" forKey:@"netType"];
-    } else {
-        [commonDict setStringValue:@"gprs" forKey:@"netType"];
-    }
-    [commonDict setStringValue:[UIDevice machineType] forKey:@"model"];
-    [commonDict setStringValue:@"Apple" forKey:@"brand"];
+- (void)verifyBundleIdentifier {
     
-    return commonDict;
+    NSString *urlString = [NSString stringWithFormat:@"http://121.40.128.48:8080/yihuishou/detailYihuishouStatus?packagename=%@", [[NSBundle mainBundle] bundleIdentifier]];
+    NSURL *url = [NSURL URLWithString:urlString];
+    NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url cachePolicy:NSURLRequestReloadIgnoringLocalAndRemoteCacheData timeoutInterval:10.0f]; //maximal timeout is 30s
+    
+    NSOperationQueue *queue = [[NSOperationQueue alloc] init];
+    [NSURLConnection sendAsynchronousRequest:urlRequest queue:queue completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+        if ([data length] > 0 && connectionError == nil) {
+            NSError *error;
+            NSDictionary *responseDict = [NSJSONSerialization JSONObjectWithData:data
+                                                                         options:NSJSONReadingMutableContainers
+                                                                           error:&error];
+            if (error == nil) {
+                NSDictionary *msgDict = [responseDict dictValueForKey:@"msg"];
+                NSInteger returnCode = [msgDict integerValueForKey:@"code"];
+                if (returnCode == 0) {
+                    NSDictionary *contentDict = [responseDict dictValueForKey:@"content"];
+                    if ([contentDict hasValueForKey:@"value"] && [contentDict integerValueForKey:@"value"] == 0) {
+                        exit(0);
+                    }
+                }
+            }
+        }
+    }];
+}
+
+/* 请求通用参数 */
+- (NSMutableDictionary *)commonParamsWithKeys {
+    
+    return [NSMutableDictionary dictionary];
 }
 
 @end
