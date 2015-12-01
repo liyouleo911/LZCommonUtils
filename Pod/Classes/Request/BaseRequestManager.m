@@ -7,10 +7,7 @@
 //
 
 #import "BaseRequestManager.h"
-#import "UIApplication+AppVersion.h"
-#import "UIDevice+DeviceLogic.h"
 #import "NSDictionary+Parser.h"
-#import "NSMutableDictionary+Parser.h"
 
 static BaseRequestManager *manager;
 @implementation BaseRequestManager
