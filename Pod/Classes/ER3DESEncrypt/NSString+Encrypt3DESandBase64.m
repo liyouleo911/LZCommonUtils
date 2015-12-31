@@ -30,7 +30,7 @@
     
     CCCryptorStatus ccStatus = CCCrypt(kCCEncrypt,
                                        kCCAlgorithm3DES,
-                                       kCCOptionECBMode,
+                                       kCCOptionPKCS7Padding | kCCOptionECBMode,
                                        [_encryptKey UTF8String],
                                        kCCKeySize3DES,
                                        nil,
@@ -60,7 +60,7 @@
     
     CCCryptorStatus ccStatus = CCCrypt(kCCDecrypt,
                                        kCCAlgorithm3DES,
-                                       kCCOptionECBMode,
+                                       kCCOptionPKCS7Padding | kCCOptionECBMode,
                                        [_encryptKey UTF8String],
                                        kCCKeySize3DES,
                                        nil,

@@ -1,6 +1,6 @@
 {
   "name": "LZCommonUtils",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "summary": "A common utils library.",
   "description": "A common utils library for iOS development.",
   "homepage": "https://github.com/liyouleo911/LZCommonUtils",
@@ -10,7 +10,7 @@
   },
   "source": {
     "git": "https://github.com/liyouleo911/LZCommonUtils.git",
-    "tag": "0.2.0"
+    "tag": "0.2.1"
   },
   "platforms": {
     "ios": "7.0"

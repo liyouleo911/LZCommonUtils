@@ -1,5 +1,5 @@
 PODS:
-  - LZCommonUtils (0.2.0):
+  - LZCommonUtils (0.2.1):
     - Reachability (~> 3.2)
   - Reachability (3.2)
 
@@ -11,7 +11,7 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  LZCommonUtils: 63f35f4d74b22bc9fff2896e6207eb271cb35bc4
+  LZCommonUtils: a26792c578eacd2a0e6b8c84bd81cb76795e0b88
   Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
 
-COCOAPODS: 0.38.2
+COCOAPODS: 0.39.0
