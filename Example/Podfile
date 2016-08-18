@@ -1,5 +1,5 @@
 source 'https://github.com/CocoaPods/Specs.git'
 
-target 'LZCommonUtils_Example', :exclusive => true do
+target 'LZCommonUtils_Example' do
   pod "LZCommonUtils", :path => "../"
 end

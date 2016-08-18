@@ -1,0 +1,1 @@
+../../../../../Pod/Classes/BaseEntity/BaseEntity.h

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		08D4820AEE95854DB553D882 /* libPods-LZCommonUtils_Example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 11F41CA0167401E08A6FCEA8 /* libPods-LZCommonUtils_Example.a */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -15,10 +16,10 @@
 		6003F59E195388D20070C39A /* LZAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F59D195388D20070C39A /* LZAppDelegate.m */; };
 		6003F5A7195388D20070C39A /* LZViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5A6195388D20070C39A /* LZViewController.m */; };
 		6003F5A9195388D20070C39A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5A8195388D20070C39A /* Images.xcassets */; };
-		B11E1E442BA7D411309F5D35 /* libPods-LZCommonUtils_Example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B61E2253FFAB6550BD3B65F7 /* libPods-LZCommonUtils_Example.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		11F41CA0167401E08A6FCEA8 /* libPods-LZCommonUtils_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LZCommonUtils_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58A195388D20070C39A /* LZCommonUtils_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LZCommonUtils_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -32,11 +33,10 @@
 		6003F5A5195388D20070C39A /* LZViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LZViewController.h; sourceTree = "<group>"; };
 		6003F5A6195388D20070C39A /* LZViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LZViewController.m; sourceTree = "<group>"; };
 		6003F5A8195388D20070C39A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		A94657D5ABA378618C5BAFEC /* Pods-LZCommonUtils_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LZCommonUtils_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LZCommonUtils_Example/Pods-LZCommonUtils_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		B61E2253FFAB6550BD3B65F7 /* libPods-LZCommonUtils_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LZCommonUtils_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6516FE4E7E1CA62D306BB2FC /* Pods-LZCommonUtils_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LZCommonUtils_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LZCommonUtils_Example/Pods-LZCommonUtils_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		C2D4DA6F72387E3DE3E0D73E /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		CA640EF386788CD68EC58676 /* Pods-LZCommonUtils_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LZCommonUtils_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-LZCommonUtils_Example/Pods-LZCommonUtils_Example.release.xcconfig"; sourceTree = "<group>"; };
 		CE8A5609B09509EE5B129F25 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		E0289948E877B09BAA70A144 /* Pods-LZCommonUtils_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LZCommonUtils_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-LZCommonUtils_Example/Pods-LZCommonUtils_Example.release.xcconfig"; sourceTree = "<group>"; };
 		E982FE1E471826B934837CF0 /* LZCommonUtils.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LZCommonUtils.podspec; path = ../LZCommonUtils.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -48,7 +48,7 @@
 				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
-				B11E1E442BA7D411309F5D35 /* libPods-LZCommonUtils_Example.a in Frameworks */,
+				08D4820AEE95854DB553D882 /* libPods-LZCommonUtils_Example.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,7 +62,7 @@
 				6003F593195388D20070C39A /* Example for LZCommonUtils */,
 				6003F58C195388D20070C39A /* Frameworks */,
 				6003F58B195388D20070C39A /* Products */,
-				9C360BEE4054D1E71B8653EF /* Pods */,
+				62DD8422BC045C84F879E45E /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -80,7 +80,7 @@
 				6003F58D195388D20070C39A /* Foundation.framework */,
 				6003F58F195388D20070C39A /* CoreGraphics.framework */,
 				6003F591195388D20070C39A /* UIKit.framework */,
-				B61E2253FFAB6550BD3B65F7 /* libPods-LZCommonUtils_Example.a */,
+				11F41CA0167401E08A6FCEA8 /* libPods-LZCommonUtils_Example.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -120,11 +120,11 @@
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
-		9C360BEE4054D1E71B8653EF /* Pods */ = {
+		62DD8422BC045C84F879E45E /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				A94657D5ABA378618C5BAFEC /* Pods-LZCommonUtils_Example.debug.xcconfig */,
-				E0289948E877B09BAA70A144 /* Pods-LZCommonUtils_Example.release.xcconfig */,
+				6516FE4E7E1CA62D306BB2FC /* Pods-LZCommonUtils_Example.debug.xcconfig */,
+				CA640EF386788CD68EC58676 /* Pods-LZCommonUtils_Example.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -136,12 +136,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6003F5BF195388D20070C39A /* Build configuration list for PBXNativeTarget "LZCommonUtils_Example" */;
 			buildPhases = (
-				E51EBD050B0113237FC5313C /* Check Pods Manifest.lock */,
+				264FD9598E64A65BC2EE0868 /* 📦 Check Pods Manifest.lock */,
 				6003F586195388D20070C39A /* Sources */,
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
-				261765C415A02F5D59F81289 /* Copy Pods Resources */,
-				FD9BDFD41C4A758EB95C7960 /* Embed Pods Frameworks */,
+				E606D5BECD30D65FD62CC364 /* 📦 Embed Pods Frameworks */,
+				71AB7CD0878981E17E22E0F7 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -193,29 +193,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		261765C415A02F5D59F81289 /* Copy Pods Resources */ = {
+		264FD9598E64A65BC2EE0868 /* 📦 Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LZCommonUtils_Example/Pods-LZCommonUtils_Example-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E51EBD050B0113237FC5313C /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
+			name = "📦 Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -223,14 +208,29 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		FD9BDFD41C4A758EB95C7960 /* Embed Pods Frameworks */ = {
+		71AB7CD0878981E17E22E0F7 /* 📦 Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LZCommonUtils_Example/Pods-LZCommonUtils_Example-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E606D5BECD30D65FD62CC364 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -340,7 +340,7 @@
 		};
 		6003F5C0195388D20070C39A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A94657D5ABA378618C5BAFEC /* Pods-LZCommonUtils_Example.debug.xcconfig */;
+			baseConfigurationReference = 6516FE4E7E1CA62D306BB2FC /* Pods-LZCommonUtils_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -358,7 +358,7 @@
 		};
 		6003F5C1195388D20070C39A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E0289948E877B09BAA70A144 /* Pods-LZCommonUtils_Example.release.xcconfig */;
+			baseConfigurationReference = CA640EF386788CD68EC58676 /* Pods-LZCommonUtils_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
